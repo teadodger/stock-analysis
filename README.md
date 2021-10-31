@@ -3,11 +3,14 @@
 ###### To analyze the performance of twelve green industry stocks in order to compare the volume they traded at and their rate of return in 2017 and 2018 with the aim of forecasting which stocks are most likely to increase in value.
 ## Results
 #### Stock performance
+
 My analysis shows that only two stocks in the client's set have positive returns for 2017 and 2018, ENPH and RUN. Based on this observation I would suggest the client only invests in ENPH and RUN out of this set of potential stocks. ![Green Stocks 2017-2018 Performance](Images/2017-2018Performance.png)
  To find more promising candidates for the client's portfolio, I would recommend broadening out the search by applying the same analysis on a larger sample of stocks to identify additional competitive candidates.
 
 #### Performance of the code
- In order to be able to run the same analysis on a greater number of stocks in future without increasing the run time, it was necessary to refactor the code to make it run more efficiently. In order to achieve this, we re-wrote the script to use a tickerIndex to loop through the data once, rather than running the loop multiple times to capture each data point for each ticker symbol as was done in the original code. *Code loops presented below are shown side by side for comparison, with the older code on the left and the refactored code on the left.![Comparing Original and Refactored Code Loops](Images/CodeComparison.png) 
+ In order to be able to run the same analysis on a greater number of stocks in future without increasing the run time, it was necessary to refactor the code to make it run more efficiently. In order to achieve this, we re-wrote the script to use a tickerIndex to loop through the data once, rather than running the loop multiple times to capture each data point for each ticker symbol as was done in the original code. 
+ 
+ *Code loops presented below are shown side by side for comparison, with the older code on the left and the refactored code on the left.![Comparing Original and Refactored Code Loops](Images/CodeComparison.png) 
 
 ## Summary of refactoring
 ### The pros and cons of refactoring code
