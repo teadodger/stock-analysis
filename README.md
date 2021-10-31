@@ -1,13 +1,20 @@
-# Comparing the Volume and Yearly Rates of Return for a List of Green Stocks Using VBA Analysis 
-Columbia Bootcamp VBA project
+# Using VBA to Compare the Performance of a List of Stocks 
+## Purpose of the project
+###### To analyze the performance of 12 green industry stocks in 2017 and 2018 to determine the volume they traded at and their rate of return in both years, using VBA macros.
 ## Results
 ###### Stock performance
-Compare performance between 2017 and 2018. Suggest broadening out to a larger sample of stocks to find more competitive securities for the client's portfolio. In order to handle more stocks and more years of data without increasing the run time of the analysis too much we needed to refactor the code.
+Our analysis shows that only two stocks in the client's set have positive returns for 2017 and 2018, ENPH and RUN. ![Green Stocks 2017-2018 Performance](Images/2017-2018Performance.png)
+Based on this performance I would suggest the client only invests in ENPH and RUN out of this set of potential stocks. The same analysis could be performed on a larger sample of stocks to identify more competitive securities to broaden out the client's portfolio of holdings.  
 ###### Performance of the code
-We looped through the data once rather than the 4x in the original code. Then we placed the outputs on the output sheet one time instead of at the end of each loop. (Add images showing old code and new code of loop) This saved X amt of time in the run time. (Add images of old runtimes and new runtimes)
+In order to be able to run the same analysis on a greater number of stocks for the client in future without increasing the run time we needed to refactor the code to make it run more efficiently. In order to do this we re-wrote the script to use a tickerIndex to loop through the data once, rather than the multiple times needed in the original code, to collect all of the data points to output in the final analysis. ![Original Code Loops](Images/AllStocksOrigCodeLoop.png) ![Refactored Code Loop](Images/RefactoredCodeLoop.png)
+
 ## Summary of refactoring
 ###### The pros and cons of refactoring code
-The disadvantage of refactoring the code is that it increases coding time, introduces the chance of adding errors, but the result is a more flexible script that can be adjusted to add tickers and additional years of data with only very small changes in the array and by adding and activating new sheets.
+###### Advantages
+In this case, refactoring the code saved .27 seconds or 77% in run time on the 2017 sheet with similar results on the 2018 data. ![Refactored Code Loop](Images/Orig_AllStocks_RunTime_2017.png) ![Refactored Code Loop](Images/Orig_AllStocks_RunTime_2018.png)
+###### Potential Disadvantages
+The downside of refactoring the code is that doing so adds coding time and introduces the chance of adding errors, but the result is a more flexible script that can be adjusted to add tickers and additional years of data with only small changes in the code required.
+
 ###### Challenges of refactoring this VBA project's script
-The advantages of refactoring the code is that it can now run faster and handle a larger data set, including new stocks and more years of data. The original code also did the job but the new code can be run faster and is more efficient so that it can be more easily expanded to analyze a larger data set.
+By refactoring the code used in this project we have made it more flexible so that it can now run faster and handle larger data sets, including new stocks and more years of data without adding run time. Potential additions may be added to the code in future that would make it possible to input new sheets of data without needing to manually increase and name the array of tickers in the code. But as the code is now any new sheets containing new tickers would necessitate manually updating the array of ticker names in the code.
 
